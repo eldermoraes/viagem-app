@@ -1,31 +1,22 @@
 package com.eldermoraes.reserva;
 
-import com.eldermoraes.cliente.Cliente;
 
 public class Reserva {
     
     private long id;
-    private Cliente cliente;
+    private long idCliente;
 
     public Reserva(){
         
     }
 
-    private Reserva(long id, Cliente cliente) {
+    private Reserva(long id, long idCliente) {
         this.id = id;
-        this.cliente = cliente;
+        this.idCliente = idCliente;
     }
 
-    public static Reserva of(long id, Cliente cliente){
-        return new Reserva(id, cliente);
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public static Reserva of(long id, long idCliente){
+        return new Reserva(id, idCliente);
     }
 
     public long getId() {
@@ -34,6 +25,14 @@ public class Reserva {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(long idCliente) {
+        this.idCliente = idCliente;
     }
 
     
