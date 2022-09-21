@@ -34,7 +34,7 @@ public class ClienteResource {
     @Transactional
     @DELETE
     @Path("deleteById")
-    public void deleteById(long id){
+    public void deleteById(@QueryParam("id") long id){
         Cliente.deleteById(id);
     }
 
